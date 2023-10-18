@@ -17,6 +17,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/animation.gsap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -50,11 +54,29 @@
             <section class="section">
                 <span class="section__title" id="title4">
                     <div class="glass">
-                        <h1>Tokenomics</h1>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, reiciendis veritatis. Itaque
-                        eius aut, esse dolor ipsa vitae autem sint dolores ratione nihil similique aliquid impedit
-                        voluptas dignissimos possimus nostrum eaque, unde sed, inventore quod. Adipisci, facere. Ullam
-                        fugit soluta illo quaerat enim commodi asperiores perspiciatis, at ut quae animi!
+                        <!-- <h1>Tokenomics</h1> -->
+                        <h1>Dope-A-Meme</h1>
+                        <h1>DOPE</h1>
+
+                        <style>
+                            ul {
+                                font-size: 60px;
+                                text-align: start !important;
+                            }
+
+                            @media screen and (max-width: 800px) {
+                                ul{
+                                    font-size: 20px;
+                                }
+                            }
+                        </style>
+
+                        <ul>
+                            <li>69,000,000 Supply</li>
+                            <li>1%/1% Tax</li>
+                            <li>Liquidity Locked</li>
+                            <li>Renounced Contract</li>
+                        </ul>
                     </div>
                 </span>
                 <span id="trigger--title4"></span>
@@ -73,6 +95,21 @@
         </span>
     </div>
     <script src="app.js"></script>
+
+
+    <script>
+        // Prevent default behavior of arrow keys
+        window.addEventListener("keydown", function (e) {
+            if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+                e.preventDefault();
+            }
+        });
+
+        // Block the scroll event
+        window.addEventListener("scroll", function () {
+            window.scrollTo(0, window.scrollY);
+        });
+    </script>
 </body>
 
 </html>

@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&display=swap');
+
+*{
+    font-family: 'Delicious Handrawn', cursive;
+}
 * {
     box-sizing: border-box;
 }
@@ -78,6 +83,8 @@ html {
 @media screen and (max-width: 800px) {
     .u-class-1 {
         top: 80%;
+    left: 40%;
+
     }
 }
 
@@ -87,13 +94,27 @@ html {
 
 
 .glass{
-/* From https://css.glass */
+
 background: rgba(255, 255, 255, 0.38);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(20px);
 -webkit-backdrop-filter: blur(20px);
 
+text-align: center;
+
 color: #000000;
-padding: 20px;
+padding: 40px;
+}
+
+@media screen and  (max-width: 800px) {
+    .glass{
+        font-size: 10px !important;
+    }
+
+    video{
+        width: 400px;
+        height: 400px;
+
+    }
 }
