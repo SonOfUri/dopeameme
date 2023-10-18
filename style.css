@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Fauna One", serif;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    perspective: 1000;
+}
+
+.section {
+    height: 100%;
+    width: calc(100% / 5);
+    float: left;
+    position: relative;
+}
+.section:nth-child(1) {
+    background-image: url(/assets/opner.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section:nth-child(2) {
+    background-image: url(/assets/banner.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section:nth-child(3) {
+    background-image: url(/assets/dope.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section:nth-child(4) {
+    background-image: url(/assets/pepe-dope.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section:nth-child(5) {
+    background: #000000;
+}
+.sections {
+    width: 500%;
+    height: 100%;
+}
+.section__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #fff;
+}
+
+.u-class-1 {
+    color: #fff;
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    font-size: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media screen and (max-width: 800px) {
+    .u-class-1 {
+        top: 80%;
+    }
+}
+
+.u-class-1 i {
+    font-size: 80px;
+}
+
+
+.glass{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.38);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+
+color: #000000;
+padding: 20px;
+}
