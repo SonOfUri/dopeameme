@@ -83,7 +83,7 @@
             </section>
             <section class="section">
                 <span class="section__title" id="title5">
-                    <video src="/assets/video.mp4" autoplay loop></video>
+                    <video id="background-video" src="/assets/video.mp4" autoplay loop></video>
                 </span>
                 <span id="trigger--title5"></span>
             </section>
@@ -110,6 +110,52 @@
             window.scrollTo(0, window.scrollY);
         });
     </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const video = document.getElementById("background-video");
+      const constantVolume = 0.2;
+      let isMouseMoving = false;
+      let volumeTimeout;
+
+      // Function to set the volume to the maximum level
+      function setMaxVolume() {
+        video.volume = 1.0;
+      }
+
+      // Function to set the volume back to the constant level
+      function setConstantVolume() {
+        video.volume = constantVolume;
+      }
+
+      // Function to start sound and set volume
+      function startSound() {
+        setMaxVolume();
+        video.play();
+        document.removeEventListener("click", startSound); // Remove the click event listener after starting sound
+      }
+
+      // Add a click event listener to the entire document to start sound
+      document.addEventListener("click", startSound);
+
+      // Update the video volume when the mouse moves
+      document.addEventListener("mousemove", function () {
+        if (!isMouseMoving) {
+          isMouseMoving = true;
+          setMaxVolume();
+        }
+
+        clearTimeout(volumeTimeout);
+        volumeTimeout = setTimeout(function () {
+          isMouseMoving = false;
+          setConstantVolume();
+        }, 1000); // Adjust the delay in milliseconds as needed
+      });
+
+      // Set the initial volume to the constant level
+      video.volume = constantVolume;
+    });
+  </script>
 </body>
 
 </html>
